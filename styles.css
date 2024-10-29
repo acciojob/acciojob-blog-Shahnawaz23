@@ -1,23 +1,22 @@
 /*  your css code here. If applicable */
 
-.heading {
-	animation: linear infinite;
-	animation-name: run;
-	animation-duration: 5s;
+/* Define the animation */
+
+@keyframes slideRightToLeft {
+	from {
+		transform: translateX(50%);
+		/* Start from right */
+	}
+
+	to {
+		transform: translateX(0);
+		/* End at original position */
+	}
 }
 
-@keyframes run {
-	0% {
-		left: 0;
-	}
-
-	50% {
-		left: 100%;
-	}
-
-	100% {
-		left: 0;
-	}
+.heading {
+	animation: slideRightToLeft ease-in;
+	animation-duration: 5s;
 }
 
 .image {
